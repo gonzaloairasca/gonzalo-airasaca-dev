@@ -1,38 +1,365 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
+/* CSS HEADER */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imgHeader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+}
+.divHeaderIzq {
+  display: flex;
+  align-items: center;
+}
+.navHeader {
+  display: flex;
+  align-items: center;
+}
+.ulHeader {
+  margin-right: 10px;
+}
+ul {
+  display: flex;
+  align-items: center;
+}
+li {
+  margin: 10px;
+}
+ul li {
+  list-style: none;
+}
+.nombreHeader {
+  margin-left: 10px;
+}
+/* CSS SECTION  */
+
+.sectionPrimero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+}
+.textoSectionUno {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+.textoSectionDos {
+  font-size: 70px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contenedor {
+  height: 100vh;
+}
+/* From cssbuttons.io by @BHARGAVPATEL1244 */
+.btnQuieroSaber {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #d6d6d6;
+  color: ghostwhite;
+}
+
+.btnQuieroSaber span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.btnQuieroSaber:hover span {
+  color: black;
+}
+
+.btnQuieroSaber::before,
+.btnQuieroSaber::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.btnQuieroSaber::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btnQuieroSaber:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/* CSS SEGUNDO SECTION */
+
+.segundoSection {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #d6d6d6;
+  padding: 50px;
+}
+.tituloSegundoSection {
+  margin: 30px;
+}
+
+.contenedorAyuda {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  width: 90%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.contenedorIzqSegundoSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contenedorDerechaSegundoSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.itemsComoTeAyudamos {
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+}
+.icono {
+  font-size: 70px;
+}
+.espacio {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.espacioChico {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* CSS CONTACTO */
+
+.contain {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+div.form {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.contact-wrapper {
+  margin: auto 0;
+}
+
+.submit-btn {
+  float: left;
+}
+.reset-btn {
+  float: right;
+}
+
+.form-headline:after {
+  content: "";
+  display: block;
+  width: 10%;
+  padding-top: 10px;
+}
+
+.highlight-text {
+}
+
+.hightlight-contact-info {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.highlight-text-grey {
+  font-weight: 500;
+}
+
+.email-info {
+  margin-top: 20px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome */
+  font-family: "Roboto", sans-serif;
+}
+
+.required-input {
+  color: black;
+}
+@media (min-width: 600px) {
+  .contain {
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+h3,
+ul {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+.form-input:focus,
+textarea:focus {
+  outline: 1.5px solid;
+}
+
+.form-input,
+textarea {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.wrapper > * {
+  padding: 1em;
+  width: 60%;
+  margin: 0 auto;
+}
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr;
   }
+  .wrapper > * {
+    padding: 2em 2em;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+  }
+  .form {
+    width: 90%;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts {
+  color: #212d31;
+}
+
+.form {
+  background: #fff;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+form label {
+  display: block;
+}
+form p {
+  margin: 0;
+}
+
+.full-width {
+  grid-column: 1 / 3;
+}
+
+button,
+.submit-btn,
+.form-input,
+textarea {
+  padding: 1em;
+}
+
+button,
+.submit-btn {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+button:hover,
+.submit-btn:hover,
+button:focus,
+.submit-btn:focus {
+  outline: 0;
+  color: #eee;
+}
+.error {
+  color: #ec1c24;
+}
+/* CSS PORTFOLIO */
+.contenedorPortfolio {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 40px;
+}
+.portfolio {
+  display: flex;
+  margin: 10px;
+}
+.cardPortfolio {
+  width: 33.33%;
+  height: 350px;
+  margin: 20px 10px 20px 10px;
+  border-radius: 10px;
+  background-color: rgba(8, 8, 173, 0.2);
+}
+.effect1 {
+  box-shadow: 9px 10px 6px -6px #777;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  height: 130px;
+  background: #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.redes {
+  font-size: 30px;
 }
